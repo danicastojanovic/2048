@@ -19,11 +19,11 @@ npx serve
 
 ## Need to implement:
 
-- [] restart game
-- [] score count
-- [] leaderboard
-- [] persist data
-- [] UX improvements
+- [ ] restart game
+- [ ] score count
+- [ ] leaderboard
+- [ ] persist data
+- [ ] UX improvements
 
 ## License
 
