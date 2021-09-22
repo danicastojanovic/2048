@@ -1,6 +1,6 @@
 import { Board } from './classes/game.js';
-// const game = new Game();
-const board = new Board();
+
+var board = new Board();
 board.initialize(renderState);
 document.addEventListener('keydown', move);
 
@@ -30,3 +30,8 @@ function move(e) {
     board.move('left', renderState);
   }
 }
+
+document.getElementById('reset').onclick = function() {
+  board = new Board();
+  board.initialize(renderState);
+};
