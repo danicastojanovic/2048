@@ -19,6 +19,10 @@
   width: 34px;
 }
 
-body {
+div.board {
   touch-action: none;
 }
+
+/* button {
+  touch-action: auto;
+} */

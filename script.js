@@ -37,7 +37,7 @@ document.getElementById('reset').onclick = function() {
 };
 
 function swipedetect(){
-
+  var el = document.getElementById('board');
   var swipedir,
   startX,
   startY,
@@ -49,7 +49,7 @@ function swipedetect(){
   elapsedTime,
   startTime;
 
-  window.addEventListener('touchstart', function(e){
+  el.addEventListener('touchstart', function(e){
     e.preventDefault()
       var touchobj = e.changedTouches[0]
       swipedir = 'none'
@@ -59,11 +59,11 @@ function swipedetect(){
       startTime = new Date().getTime() // record time when finger first makes contact with surface
   }, {passive: false})
 
-  window.addEventListener('touchmove', function(e){
+  el.addEventListener('touchmove', function(e){
       e.preventDefault() // prevent scrolling when inside DIV
   }, {passive: false})
 
-  window.addEventListener('touchend', function(e){
+  el.addEventListener('touchend', function(e){
     e.preventDefault()
       var touchobj = e.changedTouches[0]
       distX = touchobj.pageX - startX // get horizontal dist traveled by finger while in contact with surface
