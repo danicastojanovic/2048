@@ -18,3 +18,7 @@
   text-align: center;
   width: 34px;
 }
+
+body {
+  touch-action: none;
+}
