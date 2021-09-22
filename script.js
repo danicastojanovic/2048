@@ -1,4 +1,4 @@
-import { Board } from './classes/game.js';
+import { Board } from './game.js';
 
 var board = new Board();
 board.initialize(renderState);
