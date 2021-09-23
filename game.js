@@ -17,10 +17,8 @@ var Board = class {
       state[i][j] = this.#next;
       this.toggleNext();
     } else {
-      if (!this.gameStatusOn()) return;
       this.randomPlacement();
     }
-    if (!this.gameStatusOn()) return;
     return state;
   }
 
@@ -33,6 +31,9 @@ var Board = class {
   }
 
   move(direction, callback) {
+    if (!this.gameStatusOn()) {
+      alert('Game Over');
+    }
     let hasChanged = false;
     let oldState = this.getState();
     let newState = [[], [], [], []];
@@ -163,7 +164,6 @@ var Board = class {
         }
       }
     }
-    alert('Game Over!');
     return false;
   }
 
